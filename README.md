@@ -11,7 +11,6 @@ The Aqua Sense application is implemented using the [Rust](https://www.rust-lang
 Ensure you adhere to the following steps for a hassle-free setup and execution of Aqua Sense on your Raspberry Pi Pico.
 
 ### Prerequisites
-
 1. **Install elf2uf2-rs:**
    Convert ELF files to UF2 format, suitable for flashing onto the Raspberry Pi Pico.
    ```shell
