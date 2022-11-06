@@ -24,6 +24,9 @@ Then:
    - Connect GP3 on the Probe to SWDIO on the Target
    - Connect a ground line from the CMSIS-DAP Probe to the Target too
 
+  If you have good wiring between your Pico's, you can instead use rust-dap for faster programming:
+  https://raw.githubusercontent.com/9names/binary-bits/main/rust-dap-pico-ramexec-setclock.uf2
+
 ## WeAct MiniF4
 https://therealprof.github.io/blog/usb-c-pill-part1/
 
