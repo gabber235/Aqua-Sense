@@ -27,10 +27,10 @@ Then:
 - [picoprobe.uf2](https://github.com/raspberrypi/picoprobe/releases/download/picoprobe-cmsis-v1.0.1/picoprobe.uf2) -
   Official raspberrypi probe firmware supporting CMSIS-DAP.
 - [raspberry_pi_pico-DapperMime.uf2](https://github.com/majbthrd/DapperMime/releases/download/20210225/raspberry_pi_pico-DapperMime.uf2) -
-  Based upon an older version of the CMSIS-DAP sources.
+  Based upon an older version of the CMSIS-DAP sources. ([Source](https://github.com/majbthrd/DapperMime))
 - [rust-dap-pico-ramexec-setclock.uf2](https://raw.githubusercontent.com/9names/binary-bits/main/rust-dap-pico-ramexec-setclock.uf2) -
   If you have good wiring between your Pico's, this firmware will give faster
-  programming.
+  programming. (Inofficial build by [@9names](https://github.com/9names/).) ([Source](https://github.com/ciniml/rust-dap))
 
 Then:
 
