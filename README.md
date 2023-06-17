@@ -32,5 +32,6 @@ Once all prerequisites are set, deploy the Aqua Sense code to your Raspberry Pi 
 cargo run --bin aqua_sense.rs
 ```
 
+)
 ## License
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
