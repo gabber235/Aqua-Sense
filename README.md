@@ -1,25 +1,37 @@
-# Super Blank Pico Project
+# Aqua Sense - Smart Water Faucet Monitor
 
-Super blank template for getting started programming Rust on your
-Raspberry Pi Pico.
+## Introduction
+Welcome to the repository of "Aqua Sense," a smart water faucet monitor developed as part of a university project. Aqua Sense is designed with the intention to promote judicious water usage by providing real-time feedback via a straightforward and intuitive interface affixed to household faucets.
 
-## Steps
-1. clone this project
-2. navigate into the cloned project directory with terminal
-3. run 'cargo run --bin blinky' to build and flash the blinky example written
-by the rp-rs team.
-4. you should see the onboard LED flashing on your Pico
+## Technology Stack
+The Aqua Sense application is implemented using the [Rust](https://www.rust-lang.org/) programming language and is engineered to operate seamlessly with the Raspberry Pi Pico.
 
-## Notes
-I made this project for myself for quick new-project start up, but also for future Rustaceans who are interested in taking the Raspberry Pi Pico for a test drive.
+## Installation and Running
 
-It took me around 2 hours to go from unboxing my pico to flashing
-the LED.  Granted I didn't know Rust or anything about microcontrollers
-when I opened the box, but if I would have had this project I would
-have used it as a starting point.
+Ensure you adhere to the following steps for a hassle-free setup and execution of Aqua Sense on your Raspberry Pi Pico.
+
+### Prerequisites
+
+1. **Install elf2uf2-rs:**
+   Convert ELF files to UF2 format, suitable for flashing onto the Raspberry Pi Pico.
+   ```shell
+   cargo install elf2uf2-rs --locked
+   ```
+2. **Add the ARM Cortex-M thumb target:**
+    ```shell
+    rustup target add thumbv6m-none-eabi
+    ```
+3. **Install probe-run:**
+    ```shell
+    cargo install probe-run
+    ```
+
+### Deploying Aqua Sense to Raspberry Pi Pico
+Once all prerequisites are set, deploy the Aqua Sense code to your Raspberry Pi Pico with:
+
+```shell
+cargo run --bin aqua_sense.rs
+```
 
 ## License
-The contents of this repository are dual-licensed under the MIT OR 
-Apache 2.0 License. That means you can choose either the MIT license 
-or the Apache-2.0 license when you re-use this code. See MIT or APACHE2.0
-for more information on each specific license.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
