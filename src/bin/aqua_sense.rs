@@ -58,7 +58,9 @@ const XTAL_FREQ_HZ: u32 = 12_000_000u32;
 // Device I2c addresses
 const LCD_ADDRESS: u8 = 0x7c >> 1;
 
-const PULSES_PER_LITER: f32 = 330.0;
+const PULSES_PER_LITER: f32 = 341.0;
+
+const SCREEN_WIDTH: u8 = 16;
 
 // Color cycle
 const COLOR_CYCLE: [Rgb; 6] = [
@@ -342,11 +344,11 @@ fn format_liters(liters: f32) -> String {
 }
 
 fn multi_part_lines(left: String, right: String) -> String {
-    if left.len() + right.len() <= 16 {
+    if left.len() + right.len() <= SCREEN_WIDTH {
         format! {
             "{}{}{}",
             left,
-            " ".repeat(16 - left.len() - right.len()),
+            " ".repeat(SCREEN_WIDTH - left.len() - right.len()),
             right
         }
     } else {
@@ -355,8 +357,8 @@ fn multi_part_lines(left: String, right: String) -> String {
 }
 
 fn center_text(text: String) -> String {
-    if text.len() < 16 {
-        format!("{}{}", " ".repeat((16 - text.len()) / 2), text)
+    if text.len() < SCREEN_WIDTH {
+        format!("{}{}", " ".repeat((SCREEN_WIDTH - text.len()) / 2), text)
     } else {
         text
     }
